@@ -178,16 +178,19 @@
         }
 
         #postArea {
-            padding: 20px;
+            padding: 10px;
             background-color: white;
             width: 50%;
             margin: 130px auto; /* 水平置中 */
             height: 100%;
             border-radius: 5px;
+
+
         }
-        #logoimgplace{
+        .logoimgplace{
             position: relative; /* 讓 .user 定位的參考點是這個容器 */
             display: inline-block;
+
         }
         .user{
             position: absolute;
@@ -205,7 +208,6 @@
             display: flex;
             flex-direction: row;
             position: relative;
-            left: -5px;
         }
         .catlogotext2 div{
             padding: 0;
@@ -217,12 +219,16 @@
             margin: 0;
         }
 
+        #add{
+            color: #0064d1;
+        }
 
 
 
 
 
-        #userName{
+
+        .userName{
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
@@ -230,10 +236,52 @@
             width: 100%;
             margin: 0;
         }
-        #userName div{
+        .userName div{
             margin: 0;
         }
 
+        #post{
+            margin: 0 auto;
+            height: 60%;
+            width: 100%;
+            border: 1px solid #e1e3e5;
+            margin-top:5px ;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 兩欄 */
+            grid-template-rows: repeat(3, 1fr); /* 兩行 */
+
+
+        }
+        #item1{
+            grid-row: 1/3;
+            grid-column: 1/3;
+            
+        }
+        #item2{
+            grid-row: 1/2;
+            grid-column: 3/4;
+            background-color: blue;
+        }#item3{
+            grid-row: 2/3;
+            grid-column: 3/4;
+            background-color: gray;
+        }
+         #item4{
+             margin-top: 5px;
+            grid-row: 3/4;
+            grid-column: 1/4;
+             height: 400px;
+         }
+
+         .report{
+            /*縮放到適應容器大小*/
+            width: 100%;
+             height: 100%;
+         }
+         #post p{
+             margin: 5px 10px;
+         }
 
     </style>
 </head>
@@ -269,7 +317,7 @@
 
     <div id="postArea">
         <div class="catlogoplace">
-            <div id="logoimgplace">
+            <div class="logoimgplace">
                 <img src="./icon/catgrouplog_n.png" alt="sticker" class="catlogo">
                 <img src="./icon/2940654.png" alt="user" class="user">
             </div>
@@ -277,9 +325,9 @@
                 <div class="catlogotext2">
                     <div><a href="#">貓咪也瘋狂俱樂部 CrazyCat club</a></div>
                     <div>．</div>
-                    <div><a href="#">加入</a>></div>
+                    <div ><a id="a" href="#">加入</a></div>
                 </div>
-                <div id="userName">
+                <div class="userName">
                     <div >Jack whang</div>
                     <div>．</div>
                     <div>3小時</div>
@@ -288,6 +336,88 @@
 
                 </div>
             </div>
+        </div>
+        <div id="post">
+            <div id="item1">
+                <img class="report" src="./icon/ChatGPT%20Image%202025年5月14日%20上午06_55_16.png" alt="海報">
+            </div>
+            <div id="item2">
+                <img class="report" src="./icon/cat1.png" alt="使用者的貓">
+            </div>
+            <div id="item3">
+                <img class="report" src="./icon/cat2.png" alt="使用者的貓">
+
+            </div>
+            <div id="item4">
+                <div class="catlogoplace">
+                    <div class="logoimgplace">
+                        <img src="./icon/catgrouplog_n.png" alt="sticker" class="catlogo">
+                        <img src="./icon/catUser.png" alt="user" class="user">
+                    </div>
+                    <div class="textblock">
+                        <div class="catlogotext2">
+                            <div><a href="#">貓咪也瘋狂俱樂部 CrazyCat club</a></div>
+                            <div>．</div>
+                            <div ><a id="add" href="#">加入</a></div>
+                        </div>
+                        <div class="userName">
+                            <div >毛孩大選官 Meowster Bao</div>
+                            <div>．</div>
+                            <div>7天</div>
+                            <div>．</div>
+                            <i class="fa-solid fa-earth-americas"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+                <p>
+                    🐾《2025最萌毛孩選舉大賽》開跑啦！🐾
+                    <br>
+
+                    你家主子最可愛？快來爭奪最萌寶座！
+                    <br>
+
+                    📣 由【🐾毛日子生活館】主辦，號召全台鏟屎官一同參與的全民投票盛會正式登場！只要你家有毛孩，就有機會榮登「人氣毛孩王」！
+                    <br>
+
+                    ---
+                    <br>
+
+                    🏆 活動辦法｜就是這麼簡單！
+                    <br>
+                    1. 上傳你家寵物的生活美照（不限貓狗，兔子、鳥、蜥蜴也可以！）<br>
+                    2. 為毛孩命名並寫一句超萌介紹詞<br>
+                    3. 分享連結給好友、家人、鄰居投票📲<br>
+                    4. 票數最高的毛孩可獲得💎人氣王獎盃＋寵物豪禮組！<br>
+                    <br>
+                    ---
+                    <br>
+                    🎁 精美獎項
+                    <br>
+                    🥇 第一名：毛孩人氣王獎盃＋萬元寵物福袋<br>
+                    🥈 第二名：專屬訂製寵物寫真書＋高級飼料半年份<br>
+                    🥉 第三名：毛孩專屬姓名吊牌＋玩具大禮包<br>
+                    <br>
+                    凡參賽即贈「超Q寵物投票電子證書」一份🎉
+                    <br>
+                    ---
+                    <br>
+                    ⏰ 投票期間：
+                    <br>
+                    2025年6月1日～6月15日<br>
+                    📍 投票網站：http://www.petvote2025.com<br>
+                    📩 投稿方式請私訊本粉專或 email 至：petvote@pawlife.tw<br>
+                    <br>
+                    ---
+                    <br>
+                    📣 快來讓全世界認識你家超萌毛孩！
+                    \毛孩選舉 最萌之爭 PetVote2025 全民投票最可愛
+
+                </p>
+            </div>
+
+
         </div>
 
 
