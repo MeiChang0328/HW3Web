@@ -38,7 +38,6 @@
             display: flex;
             justify-content: flex-end;
             /*寬度佔據topfix1的一半*/
-            width: 50%;
             align-items: center; /* 垂直置中 */
 
         }
@@ -296,17 +295,13 @@
         }
 
         #post{
-            margin: 0 auto;
-            width: 100%;
+            width: 95%;
             border: 1px solid #e1e3e5;
-            margin-top:5px ;
-
             display: grid;
             grid-template-columns: repeat(3, 1fr); /* 兩欄 */
             grid-auto-rows: auto;
-
-
-
+            margin: 5px auto;
+            border-radius: 10px;
         }
         #item1{
             grid-row: 1/3;
@@ -424,7 +419,11 @@
                 font-size: 20px;
             }
             #Jackpost{
-                padding: 0 10px;
+                padding: 0 20px;
+            }
+            #Jackpost p{
+                margin-top: 10px;
+               margin-bottom: 0;
             }
             .users{
                 width: 100%;
@@ -605,6 +604,27 @@
             margin-bottom: 10px;
         }
 
+        #control2{
+            display: flex;
+            flex-direction: row;
+        }
+        #control2 a {
+            color: black;
+            font-weight: bold;
+            padding: 0;
+            margin: 0;
+            /*游標懸停時會有手指*/
+            cursor: pointer;
+        }
+        #dot2{
+            padding: 0px;
+            margin: 0px 2px;
+        }
+        #controlnone2{
+            display: none;
+        }
+        #Jackpost
+
 
 
 
@@ -665,7 +685,7 @@
             </div>
         </div>
         <div id="Jackpost">
-            <p>
+            <p >
                🐾 拜託幫我們家毛毛投一票！🐾
                 <br>
                 親愛的朋友們，我們家英國短毛貓 <strong>毛毛</strong> 參加了《2025最萌毛孩選舉大賽》🎉！
@@ -673,6 +693,12 @@
                 毛毛是隻灰藍色毛、圓滾滾的英國短毛貓，擁有超萌大眼、肉球般的臉頰，以及一副什麼事都與我無關的高冷臉🤣<br>
                 但只要拿出逗貓棒，他就會像個毛球炸彈一樣衝刺撲擊，讓我們每天笑到肚子痛！<br>
                 <br>
+            </p>
+            <div id="control2">
+                <p id="dot2">...</p>
+                <a id="more2">查看更多</a>
+            </div>
+            <p id="controlnone2">
                 這次想讓更多人認識這個軟綿綿卻自帶喜感的孩子，如果你也覺得他可愛、值的一票，拜託幫毛毛投下你神聖的一票💖
                 <br>
                 📍投票連結：https://www.petvote2025.com/vote/maomao<br>
@@ -881,6 +907,12 @@
             document.getElementById("dot").style.display = "none";
             document.getElementById("more").style.display = "none";
             document.getElementById("controlnone").style.display = "block";
+        });
+        // 點擊查看更多時會隱藏dot2和more2，並顯示controlnone2
+        document.getElementById("more2").addEventListener("click", function () {
+            document.getElementById("dot2").style.display = "none";
+            document.getElementById("more2").style.display = "none";
+            document.getElementById("controlnone2").style.display = "block";
         });
 
 
