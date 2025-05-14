@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>點擊圖標變色</title>
+<!--    icon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!--google 字型-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <style>
         body{
             margin: 0;
-            padding: 0;
+            padding: 20px;
             height: 100vh;
             background-color: rgba(242,244,247,0.93);
         }
@@ -15,7 +21,7 @@
             display: flex;
             justify-content: space-between; /* 確保子元素分佈 */
             align-items: center; /* 垂直置中 */
-            background-color: rgba(255,255,255,0.93);
+            background-color: rgba(255,255,255);
 
         }
         #account{
@@ -53,7 +59,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: rgba(255,255,255,0.93);
+            background-color: rgba(255,255,255);
 
         }
         #logo{
@@ -63,25 +69,37 @@
         #account input{
             margin: 0 5px;
             height: 35px;
-            border-radius: 5px;
-            border: 2px solid rgba(201,204,208,0.93);
+            border-radius: 8px;
+            border: 1px solid rgba(201,204,208,0.93);
+            padding: 5px;
+            font-size: 17px;
+            /*placehoder文字置中*/
+            width: 200px;
+        }
+        #account input:hover{
+            border: 1px solid black;
         }
 
         #account button{
-            height: 35px;
-            width: 50px;
-            border-radius: 5px;
+            height: 45px;
+            width: 60px;
+            border-radius: 7px;
             background-color: rgba(8,102,255,0.93);
             color: white;
             border: none;
             white-space: nowrap;
             font-weight: bold;
+            font-size: 17px;
+            margin: 0 5px;
+            text-align: center;
+
 
         }
         #account div a{
             /*移除底縣*/
             text-decoration: none;
-            color: rgba(54,133,219,0.93);
+
+            color: #0064d1;
             margin: 0 5px;
             /*粗體字*/
             font-weight: bold; /* 粗體字 */
@@ -109,8 +127,8 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            width: 50%;
-            margin: 0 3%;
+            width: 100%;
+            margin: 5px 5px;
         }
         .catlogotext{
             display: flex;
@@ -120,11 +138,22 @@
             width: 100%;
 
         }
+        /*選擇第一個catlogoplace*/
+        #topfix2 .catlogoplace{
+            margin-left:50px;
+        }
+
         .catlogoplace div{
             margin: 0 5px;
-            font-size: 10px;
+            font-size: 15px;
             color: rgba(106,108,112,0.93);
             white-space: nowrap;
+            font-family: "Roboto", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
+            font-variation-settings:
+                    "wdth" 100;
 
         }
         .catlogoplace div a{
@@ -150,15 +179,17 @@
         }
 
         #groupbtn{
-            width: 100px;
+            width: 110px;
+            height: 40px;
             flex-direction: row;
             background-color: #1971ff;
-            border-radius: 5px;
-            height: 35px;
+            border-radius: 8px;
             display: flex;
             justify-content: center; /* 置中 */
             align-items: center; /* 垂直置中 */
-            margin: 0 3%;
+            margin: 0 25px;
+            padding: 1px;
+
 
         }
         #groupbtn a {
@@ -178,25 +209,29 @@
         }
 
         #postArea {
-            padding: 10px;
+            padding: 0px;
+            padding-top: 10px;
             background-color: white;
-            width: 50%;
+            width: 100%;
+            max-width:692px;
+
             margin: 130px auto; /* 水平置中 */
-            height: 100%;
             border-radius: 5px;
 
-
         }
+
         .logoimgplace{
             position: relative; /* 讓 .user 定位的參考點是這個容器 */
             display: inline-block;
-
         }
+
+
         .user{
             position: absolute;
             bottom: 0;
             right: 0;
             width: 25px;
+            height: 25px;
             border-radius: 50%;
             background-color: aquamarine;
             border: 1px solid white;
@@ -238,6 +273,7 @@
         }
         .userName div{
             margin: 0;
+            font-size: 13px;
         }
 
         #post{
@@ -287,10 +323,12 @@
             #comment{
                 display: flex;
                 flex-direction: row;
-                width: 100%;
-                margin: 5px 0;
+                width: 98%;
+                margin: 5px auto;
                 border-bottom: 1px solid #e1e3e5;
                 padding: 5px 0;
+                justify-content: center;
+
             }
             #comment i{
                 display: flex;
@@ -339,8 +377,8 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
-                width: 100%;
-                margin: 5px 0;
+                width: 98%;
+                margin: 5px auto;
                 border-bottom: 1px solid #e1e3e5;
                 padding: 3px 0;
 
@@ -361,6 +399,158 @@
                 color: #65676b;
                 font-size: 20px;
             }
+            #Jackpost{
+                padding: 0 10px;
+            }
+            .users{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                margin-top: 10px;
+                margin-left: 10px;
+
+            }
+            .commenter{
+                width: 5vh;
+                height: 5vh;
+                border-radius: 50%;
+                background-color: darkolivegreen;
+                margin: 0 5px;
+
+            }
+            .usercomment{
+                width: auto;
+                height: auto;
+                border-radius: 7px;
+                background-color: #e1e3e5;
+                margin: 0 5px;
+                padding: 2px;
+                /*google字型*/
+                font-family: "Roboto", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+                font-variation-settings:
+                        "wdth" 100;
+                /*google字型*/
+
+            }
+            .usercomment p{
+                margin: 0;
+                padding: 0;
+                color: black;
+                padding: 3px 3px;
+            }
+            .commentime{
+                margin: 0 3px;
+                padding: 0;
+                color: #65676b;
+            }
+            #Allcomment{
+                display: flex;
+                flex-direction: row;
+                margin-left: 10px;
+                margin-bottom: 10px;
+            }
+
+            #Allcomment p{
+                margin: 0 5px;
+                color: #65676b;
+                font-weight: bold;
+
+
+            }
+
+            #Allcomment i{
+                margin-top: 4px;
+                color: #65676b;
+
+            }
+            .commentuserName{
+                font-weight: bold;
+            }
+
+            #bottomfix{
+                /*固定在頁尾*/
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 100%;
+                background-color: white;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height:120px;
+                padding: 10px;
+                /*增加上部漸層陰影*/
+                box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.1); /* 自然陰影 */
+                z-index: 999; /* 確保在最上層 */
+
+
+
+
+            }
+            #bottomfix p {
+                text-align: center;
+                margin-top: 10px;
+                padding: 0;
+                font-size:25px;
+                font-weight: bold;
+                white-space: nowrap;
+                /*字型*/
+                font-family: "Roboto", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+                font-variation-settings:
+                        "wdth" 100;
+                /*字型*/
+
+            }
+            #bottomfix #btns{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+                margin: 0;
+                padding: 0
+
+            }
+            #bottomfix #btns button{
+                width: 250px;
+                height: 50px;
+            }
+
+            #btn2{
+
+                background-color: #0866ff;
+                border-radius: 10px;
+                font-weight: bold;
+                border: none;
+
+            }
+            #btn3{
+                background-color: #31a14b;
+                border-radius: 10px;
+                font-weight: bold;
+                border: none;
+            }
+            #bottomfix #btns button a{
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+            }
+            #btns p{
+                margin: 0;
+                padding: 0;
+                font-size: 15px;
+                text-align: center;
+                margin: 13px 20px;
+
+            }
+
 
 
 
@@ -373,7 +563,7 @@
         <img src="./icon/Facebook-Logo-650x366.png" alt="facebook" id="logo">
         <div id="account">
     <!--        兩個輸入框-->
-            <input type="text" id="input1" placeholder="電子郵件或手機號碼">
+            <input type="text" id="input1" placeholder="電子郵件地址或手機號碼">
             <input type="text" id="input2" placeholder="密碼">
     <!--        按鈕-->
             <button id="btn1"><a href="#">登入</a></button>
@@ -394,13 +584,15 @@
             <div>加入社團</div></a>
         </div>
 
+
+
     </div>
 
     <div id="postArea">
         <div class="catlogoplace">
             <div class="logoimgplace">
                 <img src="./icon/catgrouplog_n.png" alt="sticker" class="catlogo">
-                <img src="./icon/2940654.png" alt="user" class="user">
+                <img src="./icon/person.jpg" alt="user" class="user">
             </div>
             <div class="textblock">
                 <div class="catlogotext2">
@@ -417,6 +609,24 @@
 
                 </div>
             </div>
+        </div>
+        <div id="Jackpost">
+            <p>
+               🐾 拜託幫我們家毛毛投一票！🐾
+                <br>
+                親愛的朋友們，我們家英國短毛貓 <strong>毛毛</strong>> 參加了《2025最萌毛孩選舉大賽》🎉！
+                <br>
+                毛毛是隻灰藍色毛、圓滾滾的英國短毛貓，擁有超萌大眼、肉球般的臉頰，以及一副什麼事都與我無關的高冷臉🤣<br>
+                但只要拿出逗貓棒，他就會像個毛球炸彈一樣衝刺撲擊，讓我們每天笑到肚子痛！<br>
+                <br>
+                這次想讓更多人認識這個軟綿綿卻自帶喜感的孩子，如果你也覺得他可愛、值的一票，拜託幫毛毛投下你神聖的一票💖
+                <br>
+                📍*投票連結：https://www.petvote2025.com/vote/maomao<br>
+                📅 投票期間：6月1日～6月15日<br>
+                🙏 一人一票、毛毛感恩～<br>
+                <br>
+                \#毛毛最萌 #英國短毛貓 #毛孩選舉 #拜託投毛毛一票 #英短的魅力你不懂
+            </p>
         </div>
         <div id="post">
             <div id="item1">
@@ -526,14 +736,58 @@
             </div>
 
         </div>
+        <div id="comments">
+            <div id="Allcomment">
+                <p>所有留言</p>
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="users">
+                <img class="commenter" src="./icon/person2.jpg" alt="commenter1">
+                <div class="commentblock">
+                    <div class="usercomment">
+                        <p class="commentuserName">抓小魚</p>
+                        <p class="usersay">推推推</p>
+                    </div>
+                    <p class="commentime">10小時</p>
+
+                </div>
+            </div>
+            <div class="users">
+                <img class="commenter" src="./icon/person3.png" alt="commenter1">
+                <div class="commentblock">
+                    <div class="usercomment">
+                        <p class="commentuserName">莊秀華</p>
+                        <p class="usersay">毛毛最可愛，阿姨來投票了</p>
+                    </div>
+                    <p class="commentime">12小時</p>
+
+                </div>
+            </div>
+            <div class="users">
+                <img class="commenter" src="./icon/person4.png" alt="commenter1">
+                <div class="commentblock">
+                    <div class="usercomment">
+                        <p class="commentuserName">Yu Yun Liu</p>
+                        <p class="usersay">推推可愛貓咪</p>
+                    </div>
+                    <p class="commentime">1天</p>
+
+                </div>
+            </div>
+        </div>
 
 
     </div>
 
-
-<script>
-    
-</script>
+    <div id="bottomfix">
+        <p>登入或註冊 Facebook 即可和親朋好友以及認識的人聯繫。</p>
+        <div id="btns">
+<!--            兩個按鈕-->
+            <button id="btn2"><a href="#">登入</a></button>
+            <p>或</p>
+            <button id="btn3"><a href="#">建立新帳號</a></button>
+    </div>
 
 </body>
+
 </html>
