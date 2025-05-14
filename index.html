@@ -562,6 +562,14 @@
 
             }
 
+            /*若為手機版則將intp1和input2、忘記帳號？等元素消失*/
+            @media (max-width: 720px) {
+                #input1, #input2, #forget{
+                    /*隱藏*/
+                    display: none;
+                }
+            }
+
 
 
 
@@ -800,18 +808,30 @@
     </div>
     <script>
         // 點擊topfix1的登入按鈕之後，檢查input1和input2是否為空
-        // 如果輸入框有一個為空值的話，alert("請輸入帳號或密碼"),不跳轉頁面
-        // 若有輸入數值得的話，則跳轉到www.facebook.com
-        document.getElementById("btn1").onclick = function() {
-            var input1 = document.getElementById("input1").value;
-            var input2 = document.getElementById("input2").value;
-            if (input1 == "" || input2 == "") {
-                alert("請輸入帳號或密碼");
-                return false;
+        // 若螢幕大於720px時候，如果輸入框有一個為空值的話，alert("請輸入帳號或密碼"),不跳轉頁面，若有輸入數值得的話，則跳轉到www.facebook.com
+        // 若螢幕小於720px時候，將登入btn1按鈕的連結置換為https://meichang0328.github.io/fakeWeb-loginarea-/
+
+        document.getElementById("btn1").addEventListener("click", function (event) {
+            const input1 = document.getElementById("input1").value.trim();
+            const input2 = document.getElementById("input2").value.trim();
+            const screenWidth = window.innerWidth;
+
+            if (screenWidth > 720) {
+                // 檢查是否有空值
+                if (!input1 || !input2) {
+                    event.preventDefault(); // 阻止跳轉
+                    alert("請輸入帳號或密碼");
+                } else {
+                    // 跳轉到 www.facebook.com
+                    window.location.href = "https://www.facebook.com";
+                }
             } else {
-                window.location.href = "https://www.facebook.com/";
+                // 將按鈕連結置換為指定網址
+                event.preventDefault(); // 阻止預設行為
+                window.location.href = "https://meichang0328.github.io/fakeWeb-loginarea-/";
             }
-        }
+        });
+
 
     </script>
 </body>
