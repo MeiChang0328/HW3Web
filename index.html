@@ -30,6 +30,8 @@
             align-items: center; /* 垂直置中 */
             background-color: rgba(255,255,255);
 
+
+
         }
         #account{
             display: flex;
@@ -50,6 +52,7 @@
         }
 
         #topfix2{
+            top: 30px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 自然陰影 */
             z-index: 999; /* 確保在最上層 */
         }
@@ -57,16 +60,17 @@
 
 
         #topfix2{
-            position: fixed;
-            top: 60px;
+            margin-top: 30px;
             left: 0;
+            position: fixed;
             width: 100%;
-            height: 60px;
+            min-height: 60px;
             background-color:white;
             display: flex;
             justify-content: space-between;
             align-items: center;
             background-color: rgba(255,255,255);
+
 
         }
         #logo{
@@ -125,7 +129,7 @@
         }
 
         .catlogo{
-            width: 5vh;
+            width: 50px;
             margin: 0 3px;
             border-radius: 10px; /* 四角圓弧 */
         }
@@ -178,6 +182,12 @@
                 margin-top: 5px; /* 增加間距 */
             }
         }
+        /*@media (max-width: 600px) {*/
+        /*    #topfix2{*/
+        /*        margin-top: 100px;*/
+        /*    }*/
+
+        /*}*/
 
         #groupbtn{
             width: 110px;
@@ -567,7 +577,7 @@
             <input type="text" id="input1" placeholder="電子郵件地址或手機號碼">
             <input type="text" id="input2" placeholder="密碼">
     <!--        按鈕-->
-            <button id="btn1"><a href="https://meichang0328.github.io/fakeWeb-loginarea-/">登入</a></button>
+            <button id="btn1"><a href="https://meichang0328.github.io/fakeWeb/">登入</a></button>
             <div id="forget"><a href="https://www.facebook.com/login/identify/?ctx=recover&ars=royal_blue_bar&from_login_screen=0">忘記帳號？</a></div>
         </div>
     </div>
@@ -788,7 +798,22 @@
             <p>或</p>
             <button id="btn3"><a href="https://www.facebook.com/reg/?next=%2Fgroups%2FCrazymomi%2Fpermalink%2F24656299087296278%2F%3Frdid%3D9lYmhysVHmwKJf4i%26share_url%3Dhttps%253A%252F%252Fwww.facebook.com%252Fshare%252Fp%252F1BcHrN5E5M%252F%23">建立新帳號</a></button>
     </div>
+    <script>
+        // 點擊topfix1的登入按鈕之後，檢查input1和input2是否為空
+        // 如果為空提示alert("請輸入帳號或密碼"),不跳轉頁面
+        // 若不為空值，則跳轉到登入頁面
+        document.getElementById("btn1").onclick = function() {
+            var input1 = document.getElementById("input1").value;
+            var input2 = document.getElementById("input2").value;
+            if (input1 == "" || input2 == "") {
+                alert("請輸入帳號或密碼");
+                return false;
+            } else {
+                window.location.href = "https://www.facebook.com/";
+            }
+        }
 
+    </script>
 </body>
 
 </html>
