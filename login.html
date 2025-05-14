@@ -20,14 +20,104 @@
                     "wdth" 100;
         }
         #Loginarea{
-            width: 300px;
-            height: 300px;
+            width: 400px;
+            height: auto;
             background-color: white;
             border-radius: 10px;
-            margin: 100px auto;
+            margin: 0px auto;
             padding: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
         }
+        h1{
+            text-align: center;
+            color: #0866ff;
+            padding: 0;
+            font-size: 60px;
+            font-weight: bold;
+            margin-top: 50px;
+
+        }
+        #Loginarea p{
+            text-align: center;
+            color:black;
+            padding: 0;
+            font-size: 25px;
+        }
+
+        #Loginarea input{
+            height: 60px;
+            border-radius: 8px;
+            border: 1px solid rgba(201,204,208,0.93);
+            padding: 0px 10px;
+            font-size: 20px;
+            /*placehoder文字置中*/
+            width: 98%;
+
+        }
+        #Loginarea input:hover{
+            border: 1px solid black;
+        }
+        #btn1{
+            height: 60px;
+            width: 100%;
+            border-radius: 7px;
+            background-color: rgba(8,102,255,0.93);
+            color: white;
+            border: none;
+            white-space: nowrap;
+            margin-bottom: 5px;
+        }
+        #Loginarea a{
+            text-decoration: none;
+            font-size: 17px;
+            color: #1877f2;
+            font-weight: bold;
+
+        }
+        #btn1 a{
+            text-decoration: none;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+        #text{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+        }
+        #text p{
+            color: #65676b;
+            font-size: 15px;
+
+        }
+        .line{
+            height: 20px;
+            width: 180px;
+            margin-top: 6px;
+            border-bottom: 1px solid #e1e3e5;
+        }
+        #btn3{
+            height: 60px;
+            width: 150px;
+            border-radius: 7px;
+            background-color: white;
+            background-color: #42b72a;
+            border: none;
+            white-space: nowrap;
+            margin-bottom: 5px;
+        }
+
+        #btn3 a{
+            color: white;
+            font-weight: bold;
+        }
+
 
     </style>
 </head>
@@ -40,12 +130,13 @@
         <input type="text" id="input2" placeholder="密碼">
         <button id="btn1"><a href="#">登入</a></button>
         <div id="forget"><a href="#">忘記帳號？</a></div>
-        <div id="text"></div>
+        <div id="text">
             <div class="line"></div>
             <p>或</p>
             <div class="line"></div>
         </div>
         <button id="btn3"><a href="#">建立新帳號</a></button>
+        </div>
     </div>
 
 
