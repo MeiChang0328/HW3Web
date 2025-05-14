@@ -577,7 +577,7 @@
             <input type="text" id="input1" placeholder="電子郵件地址或手機號碼">
             <input type="text" id="input2" placeholder="密碼">
     <!--        按鈕-->
-            <button id="btn1"><a href="https://meichang0328.github.io/fakeWeb/">登入</a></button>
+            <button id="btn1"><a href="#">登入</a></button>
             <div id="forget"><a href="https://www.facebook.com/login/identify/?ctx=recover&ars=royal_blue_bar&from_login_screen=0">忘記帳號？</a></div>
         </div>
     </div>
@@ -802,6 +802,7 @@
         // 點擊topfix1的登入按鈕之後，檢查input1和input2是否為空
         // 如果為空提示alert("請輸入帳號或密碼"),不跳轉頁面
         // 若不為空值，則跳轉到登入頁面
+
         document.getElementById("btn1").onclick = function() {
             var input1 = document.getElementById("input1").value;
             var input2 = document.getElementById("input2").value;
@@ -809,7 +810,7 @@
                 alert("請輸入帳號或密碼");
                 return false;
             } else {
-                window.location.href = "https://www.facebook.com/" ;
+                window.location.href = "https://www.facebook.com/";
             }
         }
 
