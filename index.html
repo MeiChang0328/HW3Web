@@ -17,6 +17,8 @@
             padding: 20px;
             height: 100vh;
             background-color: rgba(242,244,247,0.93);
+
+            /*字型*/
             font-family: "Roboto", sans-serif;
             font-optical-sizing: auto;
             font-weight: <weight>;
@@ -29,7 +31,6 @@
             justify-content: space-between; /* 確保子元素分佈 */
             align-items: center; /* 垂直置中 */
             background-color: rgba(255,255,255);
-
 
 
         }
@@ -47,24 +48,25 @@
             top: 0;
             left: 0;
             width: 100%;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0,0.2); /* 自然陰影 */
+
         }
 
         #topfix2{
             top: 30px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 自然陰影 */
-            z-index: 999; /* 確保在最上層 */
+            z-index:999; /* 確保在最上層 */
         }
 
 
 
         #topfix2{
-            margin-top: 30px;
+            margin-top: 40px;
             left: 0;
             position: fixed;
             width: 100%;
-            min-height: 60px;
+            min-height: 80px;
             background-color:white;
             display: flex;
             justify-content: space-between;
@@ -137,9 +139,11 @@
         .catlogoplace{
             display: flex;
             justify-content: flex-start;
-            align-items: center;
+            align-items: flex-end;
             width: 100%;
-            margin: 5px 5px;
+            margin-top: 10px;
+            margin-left: 10px;
+
         }
         .catlogotext{
             display: flex;
@@ -151,7 +155,11 @@
         }
         /*選擇第一個catlogoplace*/
         #topfix2 .catlogoplace{
-            margin-left:50px;
+            margin-left:70px;
+        }
+        #topfix2 .catlogoplace .catlogotext{
+            margin-bottom: 10px;
+
         }
 
         .catlogoplace div{
@@ -198,9 +206,9 @@
             display: flex;
             justify-content: center; /* 置中 */
             align-items: center; /* 垂直置中 */
-            margin: 0 25px;
+            margin-right: 25px;
             padding: 1px;
-
+            margin-top: 20px;
 
         }
         #groupbtn a {
@@ -326,7 +334,7 @@
             width: 100%;
              height: 100%;
          }
-         #post p{
+         .posttext{
              margin: 5px 20px;
          }
 
@@ -368,6 +376,10 @@
                 align-content: center;
                 color: #65676b;
 
+            }
+            #thumb i{
+                border-radius: 50%;
+                width: 30px;
             }
 
             #comment p{
@@ -436,14 +448,6 @@
                 background-color: #e1e3e5;
                 margin: 0 5px;
                 padding: 2px;
-                /*google字型*/
-                font-family: "Roboto", sans-serif;
-                font-optical-sizing: auto;
-                font-weight: <weight>;
-                font-style: normal;
-                font-variation-settings:
-                        "wdth" 100;
-                /*google字型*/
 
             }
             .usercomment p{
@@ -509,15 +513,6 @@
                 font-size:25px;
                 font-weight: bold;
                 white-space: nowrap;
-                /*字型*/
-                font-family: "Roboto", sans-serif;
-                font-optical-sizing: auto;
-                font-weight: <weight>;
-                font-style: normal;
-                font-variation-settings:
-                        "wdth" 100;
-                /*字型*/
-
             }
             #bottomfix #btns{
                 display: flex;
@@ -568,7 +563,42 @@
                     /*隱藏*/
                     display: none;
                 }
+                /*隱藏加入社團的按鈕*/
+                #groupbtn{
+                    display: none;
+                }
             }
+
+        #more{
+            /*有底線*/
+            text-decoration: underline;
+            color: black;
+            font-weight: bold;
+            padding: 0;
+            margin: 0;
+        }
+        #control{
+            display: flex;
+            flex-direction: row;
+            margin-left: 20px;
+            margin-bottom: 18px;
+        }
+        #control a {
+            color: black;
+            font-weight: bold;
+            padding: 0;
+            margin: 0;
+            /*游標懸停時會有手指*/
+            cursor: pointer;
+        }
+        #dot{
+            padding: 0px;
+            margin: 0px 2px;
+        }
+
+        #controlnone{
+            display: none;
+        }
 
 
 
@@ -633,18 +663,18 @@
             <p>
                🐾 拜託幫我們家毛毛投一票！🐾
                 <br>
-                親愛的朋友們，我們家英國短毛貓 <strong>毛毛</strong>> 參加了《2025最萌毛孩選舉大賽》🎉！
+                親愛的朋友們，我們家英國短毛貓 <strong>毛毛</strong> 參加了《2025最萌毛孩選舉大賽》🎉！
                 <br>
                 毛毛是隻灰藍色毛、圓滾滾的英國短毛貓，擁有超萌大眼、肉球般的臉頰，以及一副什麼事都與我無關的高冷臉🤣<br>
                 但只要拿出逗貓棒，他就會像個毛球炸彈一樣衝刺撲擊，讓我們每天笑到肚子痛！<br>
                 <br>
                 這次想讓更多人認識這個軟綿綿卻自帶喜感的孩子，如果你也覺得他可愛、值的一票，拜託幫毛毛投下你神聖的一票💖
                 <br>
-                📍*投票連結：https://www.petvote2025.com/vote/maomao<br>
+                📍投票連結：https://www.petvote2025.com/vote/maomao<br>
                 📅 投票期間：6月1日～6月15日<br>
                 🙏 一人一票、毛毛感恩～<br>
                 <br>
-                \#毛毛最萌 #英國短毛貓 #毛孩選舉 #拜託投毛毛一票 #英短的魅力你不懂
+                #毛毛最萌 #英國短毛貓 #毛孩選舉 #拜託投毛毛一票 #英短的魅力你不懂
             </p>
         </div>
         <div id="post">
@@ -681,7 +711,8 @@
                     </div>
 
                 </div>
-                <p>
+
+                <p class="posttext">
                     🐾《2025最萌毛孩選舉大賽》開跑啦！🐾
                     <br>
 
@@ -700,6 +731,14 @@
                     2. 為毛孩命名並寫一句超萌介紹詞<br>
                     3. 分享連結給好友、家人、鄰居投票📲<br>
                     4. 票數最高的毛孩可獲得💎人氣王獎盃＋寵物豪禮組！<br>
+
+                    </p>
+                    <div id="control">
+                        <p id="dot">...</p>
+                        <a id="more">查看更多</a>
+                    </div>
+
+                    <p id="controlnone" class="posttext">
                     <br>
                     ---
                     <br>
@@ -831,6 +870,14 @@
                 window.location.href = "https://meichang0328.github.io/fakeWeb-loginarea-/";
             }
         });
+
+        // 點擊查看更多時會隱藏dot和more，並顯示controlnone
+        document.getElementById("more").addEventListener("click", function () {
+            document.getElementById("dot").style.display = "none";
+            document.getElementById("more").style.display = "none";
+            document.getElementById("controlnone").style.display = "block";
+        });
+
 
 
     </script>
