@@ -597,6 +597,8 @@
                 white-space: wrap;
                 margin-bottom: 5px;
             }
+            #add{display: none}
+            #oneDot{display: none}
         }
 
 
@@ -707,7 +709,7 @@
             <div class="textblock">
                 <div class="catlogotext2">
                     <div><a href="https://www.facebook.com/groups/216997641653096/?hoisted_section_header_type=recently_seen&multi_permalinks=24656299087296278">貓咪也瘋狂俱樂部 CrazyCat club</a></div>
-                    <div>．</div>
+                    <div id="oneDot">．</div>
                     <div ><a id="add" href="#">加入</a></div>
                 </div>
                 <div class="userName">
@@ -932,12 +934,12 @@
         });
 
         // 點擊查看更多時會隱藏dot和more，並顯示controlnone
+        // 點擊查看更多時會隱藏dot2和more2，並顯示controlnone2
         document.getElementById("more").addEventListener("click", function () {
             document.getElementById("dot").style.display = "none";
             document.getElementById("more").style.display = "none";
             document.getElementById("controlnone").style.display = "block";
         });
-        // 點擊查看更多時會隱藏dot2和more2，並顯示controlnone2
         document.getElementById("more2").addEventListener("click", function () {
             document.getElementById("dot2").style.display = "none";
             document.getElementById("more2").style.display = "none";
