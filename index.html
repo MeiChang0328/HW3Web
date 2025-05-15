@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>貓咪也瘋狂俱樂部 CrazyCat club</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./icon/facebook.png">
 <!--    icon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -179,16 +180,7 @@
             white-space: nowrap;
         }
 
-        @media (max-width: 800px) { /* 當視窗寬度小於800px時 */
-            .catlogotext {
-                flex-direction: column; /* 改為垂直排列 */
-                align-items: flex-start; /* 子元素靠左對齊 */
-            }
 
-            .catlogoplace div {
-                margin-top: 5px; /* 增加間距 */
-            }
-        }
         /*@media (max-width: 600px) {*/
         /*    #topfix2{*/
         /*        margin-top: 100px;*/
@@ -563,6 +555,17 @@
                 /*隱藏加入社團的按鈕*/
                 #groupbtn{
                     display: none;
+                }
+            }
+
+            @media (max-width: 720px) { /* 當視窗寬度小於800px時 */
+                .catlogotext {
+                    flex-direction: column; /* 改為垂直排列 */
+                    align-items: flex-start; /* 子元素靠左對齊 */
+                }
+
+                .catlogoplace div {
+                    margin-top: 5px; /* 增加間距 */
                 }
             }
 
